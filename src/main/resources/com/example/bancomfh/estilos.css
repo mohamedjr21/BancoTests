@@ -1,0 +1,59 @@
+.main-container {
+    -fx-background-color: linear-gradient(to bottom right, #E6E6FA, #F0F8FF);
+}
+
+.form-container {
+    -fx-background-color: white;
+    -fx-background-radius: 15px;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.2), 10, 0, 0, 2);
+}
+
+.titulo-registro {
+    -fx-text-fill: #483D8B;
+    -fx-font-weight: bold;
+    -fx-effect: dropshadow(gaussian, rgba(72,61,139,0.2), 10, 0, 0, 2);
+}
+
+.label-field {
+    -fx-text-fill: #483D8B;
+    -fx-font-weight: bold;
+}
+
+.text-field {
+    -fx-background-color: #F8F8FF;
+    -fx-text-fill: #2F4F4F;
+    -fx-font-size: 13px;
+    -fx-min-height: 35px;
+    -fx-min-width: 250px;
+    -fx-background-radius: 5px;
+    -fx-border-color: #E6E6FA;
+    -fx-border-radius: 5px;
+}
+
+.text-field:focused {
+    -fx-border-color: #483D8B;
+    -fx-effect: dropshadow(gaussian, rgba(72,61,139,0.2), 4, 0, 0, 0);
+}
+
+.button:focused {
+    -fx-background-color: #28bc6e;
+    -fx-border-width: 2px;
+}
+
+
+.button {
+    -fx-background-color: #278e22;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-min-width: 120px;
+    -fx-min-height: 35px;
+    -fx-background-radius: 5px;
+}
+
+.button:hover {
+    -fx-background-color: #6A5ACD;
+}
+
+#butonCancelar {
+    -fx-background-color: #DC143C;
+}

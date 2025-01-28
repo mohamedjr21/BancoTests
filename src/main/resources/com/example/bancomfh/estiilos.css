@@ -1,0 +1,116 @@
+.root {
+    -fx-background-color: linear-gradient(to bottom right, #ffffff, #f3f4f6);
+    -fx-font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+.bancotitulo {
+    -fx-text-fill: #6366f1;
+    -fx-font-weight: bold;
+    -fx-effect: dropshadow(gaussian, rgba(99, 102, 241, 0.2), 10, 0, 0, 2);
+}
+
+
+.button ImageView {
+    -fx-fit-height: 16px;
+    -fx-fit-width: 16px;
+}
+.button .text {
+    -fx-text-overrun: clip;
+}
+
+.button {
+    -fx-background-color: #7273b8;
+    -fx-text-fill: #000000;
+    -fx-font-weight: bold;
+    -fx-font-size: 11px;
+    -fx-min-width: 96px;
+    -fx-max-width: 90px;
+    -fx-max-height: 35px;
+    -fx-padding: 2px 8px;
+    -fx-background-radius: 8px;
+    -fx-cursor: hand;
+    -fx-effect: dropshadow(gaussian, rgba(99, 102, 241, 0.2), 4, 0, 0, 1);
+}
+.button:focused {
+    -fx-background-color: #28bc6e;
+    -fx-border-width: 2px;
+}
+
+
+
+
+.text-field {
+    -fx-background-color: #ffffff;
+    -fx-text-fill: #000000;
+    -fx-font-size: 11px;
+    -fx-min-width: 90px;
+    -fx-min-height: 35px;
+    -fx-max-width: 90px;
+    -fx-max-height: 35px;
+    -fx-padding: 2px 8px;
+    -fx-background-radius: 5px;
+    -fx-border-color: #e5e7eb;
+    -fx-border-radius: 5px;
+}
+
+
+.text-field:focused {
+    -fx-border-color: #6366f1;
+    -fx-effect: dropshadow(gaussian, rgba(99, 102, 241, 0.2), 4, 0, 0, 0);
+}
+
+.table-view {
+    -fx-background-color: #ffffff;
+    -fx-background-radius: 8px;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.1), 5, 0, 0, 2);
+}
+
+.table-view .column-header {
+    -fx-background-color: #f3f4f6;
+}
+
+.table-view .column-header .label {
+    -fx-text-fill: #4b5563;
+    -fx-font-weight: bold;
+    -fx-padding: 12px;
+}
+
+.table-view .table-cell {
+    -fx-alignment: CENTER;
+    -fx-padding: 12px;
+    -fx-text-fill: #4b5563;
+}
+#borrarButton:focused {
+    -fx-background-color: #28bc6e;
+    -fx-border-width: 2px;
+}
+
+#editarButton:focused {
+    -fx-background-color: #28bc6e;
+    -fx-border-width: 2px;
+}
+
+
+.table-row-cell:odd {
+    -fx-background-color: #f9fafb;
+}
+
+.table-row-cell:selected {
+    -fx-background-color: #e0e7ff;
+}
+
+.label {
+    -fx-text-fill: #4b5563;
+    -fx-font-weight: bold;
+}
+
+#borrarButton {
+    -fx-background-color: #ef4444;
+}
+
+
+
+#editarButton {
+    -fx-background-color: #10b981;
+}
+

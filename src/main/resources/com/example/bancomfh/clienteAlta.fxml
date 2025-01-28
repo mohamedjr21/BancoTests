@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<AnchorPane prefHeight="400.0" prefWidth="600.0" stylesheets="@estilos.css" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controladores.Altacontroller">
+    <children>
+        <VBox alignment="CENTER" prefHeight="400.0" prefWidth="600.0" spacing="20.0" styleClass="main-container">
+            <children>
+                <Label fx:id="registro" alignment="CENTER" styleClass="titulo-registro" text="NUEVO REGISTRO">
+                    <font>
+                        <Font size="28.0" />
+                    </font>
+                </Label>
+
+                <VBox alignment="CENTER" maxWidth="450.0" spacing="15.0" styleClass="form-container">
+                    <padding>
+                        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                    </padding>
+                    <children>
+                        <HBox alignment="CENTER" spacing="15.0">
+                            <Label text="Id" prefWidth="100.0" styleClass="label-field"/>
+                            <TextField fx:id="idField" promptText="Introduce tu ID" />
+                        </HBox>
+
+                        <HBox alignment="CENTER" spacing="15.0">
+                            <Label text="IdEmpresa" prefWidth="100.0" styleClass="label-field"/>
+                            <TextField fx:id="companyIdField" promptText="Introduce el ID Empresa" />
+                        </HBox>
+
+                        <HBox alignment="CENTER" spacing="15.0">
+                            <Label text="Estado" prefWidth="100.0" styleClass="label-field"/>
+                            <TextField fx:id="conditionField" promptText="Introduce el estado" />
+                        </HBox>
+
+                        <HBox alignment="CENTER" spacing="15.0">
+                            <Label text="Tipo" prefWidth="100.0" styleClass="label-field"/>
+                            <TextField fx:id="jsonValueField" promptText="Introduce el tipo" />
+                        </HBox>
+
+                        <HBox alignment="CENTER" spacing="30.0">
+                            <padding>
+                                <Insets top="20.0" />
+                            </padding>
+                            <Button fx:id="botonAceptar" mnemonicParsing="false" onAction="#ButonAceptar" text="ACEPTAR" defaultButton="true" />
+                            <Button fx:id="butonCancelar" mnemonicParsing="false" onAction="#ButonCancelar" text="CANCELAR" cancelButton="true" />
+                        </HBox>
+                    </children>
+                </VBox>
+            </children>
+        </VBox>
+    </children>
+</AnchorPane>
