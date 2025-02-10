@@ -50,7 +50,7 @@
                         <Insets right="10.0" />
                     </HBox.margin>
                 </Button>
-                <Button mnemonicParsing="false" onAction="#Altabuton" prefHeight="70.0" prefWidth="90.0" text="ALTA">
+                <Button fx:id="altaBoton" mnemonicParsing="false" onAction="#Altabuton" prefHeight="70.0" prefWidth="90.0" text="ALTA">
                     <graphic>
                         <ImageView fitHeight="30.0" fitWidth="30.0" preserveRatio="true">
                             <image>

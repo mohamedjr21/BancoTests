@@ -169,7 +169,7 @@ public class HelloController {
     if (selectedItem != null) {
       Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
       alert.setTitle("Confirmar borrado");
-      alert.setHeaderText("¿Estas seguro de que quieres eliminar este registro?");
+      alert.setHeaderText("¿Estas seguro de que quieres borrar este registro?");
       alert.setContentText("Esta acción no se puede deshacer.");
 
       Optional<ButtonType> result = alert.showAndWait();
