@@ -22,7 +22,7 @@ import java.util.Optional;
 public class HelloController {
 
   @FXML
-  private TableView<irDefault> InicializarTabla;
+  public TableView<irDefault> InicializarTabla;
   @FXML
   private TableColumn<irDefault, Integer> columna1;
   @FXML

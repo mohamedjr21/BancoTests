@@ -6,11 +6,15 @@ module com.example.bancomfh {
   requires javafx.controls;
   requires javafx.fxml;
   requires java.sql;
+  requires org.junit.platform.launcher;
 
-
-  opens com.example.bancomfh to javafx.fxml;
-  opens modelo to javafx.base;
   exports com.example.bancomfh;
   exports Controladores;
-  opens Controladores to javafx.fxml;
+  opens Controladores to javafx.fxml, org.junit.platform.commons;
+  opens modelo to javafx.base;
+
 }
+
+
+
+

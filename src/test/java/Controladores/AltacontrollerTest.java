@@ -12,9 +12,7 @@ import org.testfx.framework.junit5.ApplicationExtension;
 import org.testfx.framework.junit5.Start;
 import org.testfx.matcher.base.WindowMatchers;
 import org.testfx.matcher.control.LabeledMatchers;
-
 import java.io.IOException;
-
 import static org.junit.jupiter.api.Assertions.*;
 
 @ExtendWith(ApplicationExtension.class)
@@ -43,7 +41,6 @@ class AltacontrollerTest {
     FxAssert.verifyThat(robot.window("registro"), WindowMatchers.isShowing());
     robot.targetWindow("registro");
     FxAssert.verifyThat("#registro", LabeledMatchers.hasText("NUEVO REGISTRO"));
-
   }
 
 
