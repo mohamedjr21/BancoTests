@@ -9,6 +9,13 @@
     -fx-effect: dropshadow(gaussian, rgba(99, 102, 241, 0.2), 10, 0, 0, 2);
 }
 
+.Buscar{
+    -fx-background-color: #1ABC9C;
+}
+.editarButton{
+    -fx-background-color: #F39C12;
+
+}
 
 .button ImageView {
     -fx-fit-height: 16px;
@@ -19,7 +26,7 @@
 }
 
 .button {
-    -fx-background-color: #7273b8;
+    -fx-background-color: #859bc1;
     -fx-text-fill: #000000;
     -fx-font-weight: bold;
     -fx-font-size: 11px;
@@ -29,10 +36,9 @@
     -fx-padding: 2px 8px;
     -fx-background-radius: 8px;
     -fx-cursor: hand;
-    -fx-effect: dropshadow(gaussian, rgba(99, 102, 241, 0.2), 4, 0, 0, 1);
 }
 .button:focused {
-    -fx-background-color: #28bc6e;
+    -fx-background-color: #e8794a;
     -fx-border-width: 2px;
 }
 
@@ -53,9 +59,13 @@
     -fx-border-radius: 5px;
 }
 
+#borrarButton {
+    -fx-background-color: #E74C3C;
+}
+
 
 .text-field:focused {
-    -fx-border-color: #6366f1;
+    -fx-border-color: #7173e4;
     -fx-effect: dropshadow(gaussian, rgba(99, 102, 241, 0.2), 4, 0, 0, 0);
 }
 
@@ -81,14 +91,15 @@
     -fx-text-fill: #4b5563;
 }
 #borrarButton:focused {
-    -fx-background-color: #28bc6e;
+    -fx-background-color: #e8794a;
     -fx-border-width: 2px;
 }
 
 #editarButton:focused {
-    -fx-background-color: #28bc6e;
+    -fx-background-color: #e8794a;
     -fx-border-width: 2px;
 }
+
 
 
 .table-row-cell:odd {
@@ -104,9 +115,6 @@
     -fx-font-weight: bold;
 }
 
-#borrarButton {
-    -fx-background-color: #ef4444;
-}
 
 
 

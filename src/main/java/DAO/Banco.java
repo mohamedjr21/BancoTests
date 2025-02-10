@@ -35,7 +35,6 @@ public class Banco {
         defaults.add(irDefault);
       }
     }
-
     return defaults;
   }
 }

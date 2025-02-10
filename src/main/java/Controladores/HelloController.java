@@ -141,8 +141,8 @@ public class HelloController {
     editarButton.setDisable(true);
     borrarButton.setDisable(true);
 
-    InicializarTabla.getSelectionModel().selectedItemProperty().addListener((observable, oldValue, newValue) -> {
-      boolean haySeleccion = newValue != null;
+    InicializarTabla.getSelectionModel().selectedItemProperty().addListener((observable, oldValue, valor) -> {
+      boolean haySeleccion = valor != null;
       editarButton.setDisable(!haySeleccion);
       borrarButton.setDisable(!haySeleccion);
 

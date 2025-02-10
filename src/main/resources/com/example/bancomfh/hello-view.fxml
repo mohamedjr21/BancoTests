@@ -17,18 +17,18 @@
         <Insets bottom="10.0" left="20.0" right="20.0" top="20.0" />
     </padding>
     <children>
-        <HBox alignment="CENTER" prefHeight="120.0" prefWidth="459.0">
+        <HBox alignment="CENTER" prefHeight="90.0" prefWidth="459.0">
             <children>
-                <Label alignment="CENTER" prefHeight="100.0" prefWidth="459.0" styleClass="bancotitulo" text="Synergy" HBox.hgrow="ALWAYS">
+                <Label alignment="CENTER" prefHeight="61.0" prefWidth="459.0" styleClass="bancotitulo" text="Synergy" HBox.hgrow="ALWAYS">
                     <font>
                         <Font name="System Bold" size="48.0" />
                     </font>
                 </Label>
             </children>
         </HBox>
-        <HBox alignment="CENTER" prefHeight="120.0" prefWidth="459.0">
+        <HBox alignment="CENTER" prefHeight="84.0" prefWidth="528.0">
             <children>
-                <Label alignment="CENTER" prefHeight="71.0" prefWidth="122.0" text="">
+                <Label alignment="CENTER_LEFT" prefHeight="71.0" prefWidth="102.0" text="Nombre">
                     <font>
                         <Font size="16.0" />
                     </font>
@@ -42,7 +42,7 @@
                     <graphic>
                         <ImageView fx:id="Buscar" fitHeight="30.0" fitWidth="30.0" preserveRatio="true">
                             <image>
-                                <Image url="@/Lupita.png" />
+                                <Image url="@/Buscar.png" />
                             </image>
                         </ImageView>
                     </graphic>
@@ -54,7 +54,7 @@
                     <graphic>
                         <ImageView fitHeight="30.0" fitWidth="30.0" preserveRatio="true">
                             <image>
-                                <Image url="@/Añadir.png" />
+                                <Image url="@/Alta.png" />
                             </image>
                         </ImageView>
                     </graphic>

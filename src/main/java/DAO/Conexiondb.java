@@ -3,7 +3,6 @@ package DAO;
 import java.sql.*;
 
 public class Conexiondb {
-
   public static Connection connection = null;
   public static Connection getConnection() {
 
