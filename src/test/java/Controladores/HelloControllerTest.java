@@ -84,14 +84,29 @@ public class HelloControllerTest {
     robot.lookup("#companyIdField").query();
     robot.clickOn("#companyIdField");
     robot.eraseText(10);
-
     robot.write("3");
+
+    //clickear o actualizar todo
+    robot.clickOn("#conditionField");
+    robot.eraseText(20);
+    robot.write("malaga fc");
+
+    //ultimo
+    robot.clickOn("#jsonValueField");
+    robot.eraseText(30);
+    robot.write("cristiano ronaldo es el mejor");
+
+
+
+
+
+
+
 
     robot.clickOn("#botonAceptar");
 
 
   }
-
   @Test
   void TestBorrarRegistros(FxRobot robot) {
     robot.clickOn("#BuscarButton");
@@ -132,11 +147,6 @@ public class HelloControllerTest {
     robot.sleep(500);
 
     robot.clickOn("#BuscarButton");
-
-
-
-
-
 
 
 
