@@ -38,9 +38,9 @@
                         <Insets right="10.0" />
                     </HBox.margin>
                 </TextField>
-                <Button onAction="#BuscarButon" prefHeight="70.0" prefWidth="98.0" text="BUSCAR">
+                <Button fx:id="BuscarButton" onAction="#BuscarButon" prefHeight="70.0" prefWidth="98.0" text="BUSCAR">
                     <graphic>
-                        <ImageView fx:id="Buscar" fitHeight="30.0" fitWidth="30.0" preserveRatio="true">
+                        <ImageView fx:id="BuscarButon" fitHeight="30.0" fitWidth="30.0" preserveRatio="true">
                             <image>
                                 <Image url="@/Buscar.png" />
                             </image>
