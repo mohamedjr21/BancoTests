@@ -2,6 +2,7 @@ package Controladores;
 
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
+import javafx.scene.control.DialogPane;
 import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
 import org.junit.jupiter.api.BeforeAll;
@@ -13,7 +14,11 @@ import org.testfx.framework.junit5.ApplicationExtension;
 import org.testfx.framework.junit5.Start;
 import org.testfx.matcher.base.WindowMatchers;
 import org.testfx.matcher.control.LabeledMatchers;
+import org.testfx.util.WaitForAsyncUtils;
+
 import java.io.IOException;
+import java.util.Optional;
+
 import static org.junit.jupiter.api.Assertions.*;
 
 @ExtendWith(ApplicationExtension.class)
@@ -28,12 +33,15 @@ class AltacontrollerTest {
 
   @Start
   public void start(Stage stage) throws IOException {
-    mainroot = FXMLLoader.load(getClass().getResource("/com/example/bancomfh/hello-view.fxml"));
-    mainstage = stage;
-    stage.setScene(new Scene(mainroot));
+    FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/com/example/bancomfh/hello-view.fxml"));
+    mainroot = fxmlLoader.load();
+    stage.setTitle("Banco");
+    Scene scene = new Scene(mainroot, 640, 600);
+    stage.setScene(scene);
     stage.show();
     stage.toFront();
   }
+
 
   @Test
   void testVista(FxRobot robot) {
@@ -131,7 +139,7 @@ class AltacontrollerTest {
     robot.clickOn("#altaBoton");
     robot.sleep(1000);
 
-    robot.write("6");
+    robot.write("2");
     robot.clickOn("#companyIdField");
     robot.write("1");
     robot.clickOn("#conditionField");
@@ -146,9 +154,38 @@ class AltacontrollerTest {
     robot.clickOn("6");
     robot.sleep(1000);
 
-
-
   }
+
+  @Test
+  void TestAltaClienteComprobarDuplicidad1(FxRobot robot) {
+    robot.clickOn("#BuscarButton");
+    robot.sleep(500);
+    assertTrue(robot.lookup("#InicializarTabla").query().isVisible());
+
+    robot.clickOn("#altaBoton");
+    robot.sleep(1000);
+
+    robot.write("6");
+    robot.clickOn("#companyIdField");
+    robot.write("1");
+    robot.clickOn("#conditionField");
+    robot.write("Almeria fc");
+    robot.clickOn("#jsonValueField");
+    robot.write("hola Almeria fc ");
+    robot.clickOn("#botonAceptar");
+    robot.sleep(1000);
+
+    WaitForAsyncUtils.waitForFxEvents();
+    Optional<DialogPane> dialogPane = robot.lookup(".dialog-pane").tryQueryAs(DialogPane.class);
+    assertTrue(dialogPane.isPresent());
+    assertTrue(dialogPane.get().isVisible());
+
+    robot.clickOn("Aceptar");
+    robot.sleep(500);
+  }
+
+
+
 
 
 

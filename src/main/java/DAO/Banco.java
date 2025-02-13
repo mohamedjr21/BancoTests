@@ -1,4 +1,4 @@
-package  DAO;
+package DAO;
 
 import modelo.irDefault;
 import java.sql.*;
@@ -65,5 +65,4 @@ public class Banco {
     return defaults;
   }
 }
-
 

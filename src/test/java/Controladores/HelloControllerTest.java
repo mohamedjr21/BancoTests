@@ -36,12 +36,15 @@ public class HelloControllerTest {
 
   @Start
   public void start(Stage stage) throws IOException {
-    mainroot = FXMLLoader.load(getClass().getResource("/com/example/bancomfh/hello-view.fxml"));
-    mainstage = stage;
-    stage.setScene(new Scene(mainroot));
+    FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/com/example/bancomfh/hello-view.fxml"));
+    mainroot = fxmlLoader.load();
+    stage.setTitle("Banco");
+    Scene scene = new Scene(mainroot, 640, 600);
+    stage.setScene(scene);
     stage.show();
     stage.toFront();
   }
+
 
   @Test
   void testVista(FxRobot robot) {
@@ -119,8 +122,8 @@ public class HelloControllerTest {
     robot.sleep(2000);
 
     robot.clickOn("#conditionField");
-    robot.eraseText(10);
-    robot.write("almeria fc es el mejor");
+    robot.eraseText(15);
+    robot.write("almeria fc");
 
     // robot.clickOn("#jsonValueField");
     //robot.eraseText(40);
@@ -137,7 +140,7 @@ public class HelloControllerTest {
 
     assertTrue(robot.lookup("#InicializarTabla").query().isVisible());
 
-    robot.clickOn("4");
+    robot.clickOn("16");
 
     robot.clickOn("#editarButton");
     robot.sleep(1000);
@@ -148,7 +151,7 @@ public class HelloControllerTest {
 
     robot.clickOn("#conditionField");
     robot.eraseText(20);
-    robot.write("malaga fc va a ganar la copa del rey");
+    robot.write("malaga fc is the best");
 
     robot.clickOn("#botonAceptar");
 
@@ -177,8 +180,8 @@ public class HelloControllerTest {
     robot.write("malaga fc");
 
     robot.clickOn("#jsonValueField");
-    robot.eraseText(40);
-    robot.write("cristiano ronaldo es el mejor del mundo");
+    robot.eraseText(10);
+    robot.write("hola");
 
     robot.clickOn("#botonAceptar");
   }
@@ -190,7 +193,7 @@ public class HelloControllerTest {
     robot.sleep(500);
     assertTrue(robot.lookup("#InicializarTabla").query().isVisible());
 
-    robot.clickOn("15");
+    robot.clickOn("4");
     robot.clickOn("#borrarButton");
     robot.sleep(500);
 
