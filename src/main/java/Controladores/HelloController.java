@@ -42,22 +42,32 @@ public class HelloController {
   @FXML
   private ImageView Borrar;
 
-
   @FXML
   public void BuscarButon(ActionEvent actionEvent) {
+    final String searchTerm = NombreIntro.getText();
+
     Task<Void> tarea = new Task<Void>() {
       @Override
       protected Void call() throws Exception {
         try {
-          String searchTerm = NombreIntro.getText();
-          List<irDefault> buscarBancos = Banco.buscarBancos(searchTerm);
 
+          List<irDefault> buscarBancos;
+          try {
+
+            int id = Integer.parseInt(searchTerm);
+            buscarBancos = Banco.buscarBancosPorId(id);
+          } catch (NumberFormatException e) {
+            buscarBancos = Banco.buscarBancos(searchTerm);
+          }
+
+          final List<irDefault> BuscarBancos = buscarBancos;
           Platform.runLater(() -> {
             InicializarTabla.getItems().clear();
-            InicializarTabla.getItems().addAll(buscarBancos);
+            InicializarTabla.getItems().addAll(BuscarBancos);
           });
 
         } catch (SQLException e) {
+
           System.err.println("Error de SQL al consultar: " + e.getMessage());
           Platform.runLater(() -> {
             Alert error = new Alert(Alert.AlertType.ERROR);
@@ -73,6 +83,8 @@ public class HelloController {
     Thread hilo = new Thread(tarea);
     hilo.start();
   }
+
+
   @FXML
   public void Altabuton(ActionEvent actionEvent) {
     Thread altahilo = new Thread(() -> {
