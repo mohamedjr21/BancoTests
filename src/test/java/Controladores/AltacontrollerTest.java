@@ -48,6 +48,18 @@ class AltacontrollerTest {
     FxAssert.verifyThat(mainroot, Pane::isVisible);
   }
 
+  @Test
+  void TestAltaClienteCamposVacios(FxRobot robot) {
+    robot.clickOn("#BuscarButton");
+    robot.sleep(1500);
+    robot.clickOn("#altaBoton");
+    robot.sleep(1000);
+
+    robot.clickOn("#botonAceptar");
+    robot.sleep(500);
+    Optional<DialogPane> dialogPane = robot.lookup(".dialog-pane").tryQueryAs(DialogPane.class);
+
+  }
 
 
   @Test
@@ -55,13 +67,10 @@ class AltacontrollerTest {
     robot.clickOn("#BuscarButton");
     robot.sleep(500);
     assertTrue(robot.lookup("#InicializarTabla").query().isVisible());
-
     robot.clickOn("#altaBoton");
     robot.sleep(1000);
-
     robot.write("0jdsahfsdhajshfhsdhfsdfdsf");
     robot.clickOn("#companyIdField");
-
     robot.clickOn("#botonAceptar");
     robot.sleep(500);
   }
@@ -72,35 +81,30 @@ class AltacontrollerTest {
     robot.clickOn("#BuscarButton");
     robot.sleep(500);
     assertTrue(robot.lookup("#InicializarTabla").query().isVisible());
-
     robot.clickOn("#altaBoton");
     robot.sleep(1000);
-
     robot.clickOn("#companyIdField");
     robot.write("kjfsdafkjsdjfjasdf");
     robot.clickOn("#conditionField");
     robot.write("murgi");
-
     robot.clickOn("#botonAceptar");
     robot.sleep(500);
   }
+
+
 
   @Test
   void TestAltaCliente3Campos(FxRobot robot) {
     robot.clickOn("#BuscarButton");
     robot.sleep(500);
     assertTrue(robot.lookup("#InicializarTabla").query().isVisible());
-
     robot.clickOn("#altaBoton");
     robot.sleep(1000);
-
     robot.write("0jdsahfsdhajshfhsdhfsdfdsf");
     robot.clickOn("#companyIdField");
     robot.write("kjfsdafkjsdjfjasdf");
     robot.clickOn("#conditionField");
     robot.write("murgi");
-
-
     robot.clickOn("#botonAceptar");
     robot.sleep(500);
   }
@@ -110,24 +114,19 @@ class AltacontrollerTest {
     robot.clickOn("#BuscarButton");
     robot.sleep(500);
     assertTrue(robot.lookup("#InicializarTabla").query().isVisible());
-
     robot.clickOn("#altaBoton");
     robot.sleep(1000);
-
     robot.write("0jdsahfsdhajshfhsdhfsdfdsf");
     robot.clickOn("#companyIdField");
     robot.write("kjfsdafkjsdjfjasdf");
     robot.clickOn("#conditionField");
     robot.write("murgi");
     robot.clickOn("#jsonValueField");
-    robot.write("hola selectividad. hola fuente nuevaa ");
-
+    robot.write("hola nuevo ");
     robot.clickOn("#botonAceptar");
     robot.sleep(500);
     robot.clickOn("#BuscarButton");
   }
-
-
 
 
   @Test
@@ -135,20 +134,16 @@ class AltacontrollerTest {
     robot.clickOn("#BuscarButton");
     robot.sleep(500);
     assertTrue(robot.lookup("#InicializarTabla").query().isVisible());
-
     robot.clickOn("#altaBoton");
     robot.sleep(1000);
-
-    robot.write("2");
+    robot.write("4");
     robot.clickOn("#companyIdField");
     robot.write("1");
     robot.clickOn("#conditionField");
-    robot.write("Almeria fc");
+    robot.write("las norias fc");
     robot.clickOn("#jsonValueField");
-    robot.write("hola Almeria fc ");
-
+    robot.write("norias fc ");
     robot.clickOn("#botonAceptar");
-
     robot.sleep(500);
     robot.clickOn("#BuscarButton");
     robot.clickOn("6");
@@ -161,10 +156,8 @@ class AltacontrollerTest {
     robot.clickOn("#BuscarButton");
     robot.sleep(500);
     assertTrue(robot.lookup("#InicializarTabla").query().isVisible());
-
     robot.clickOn("#altaBoton");
     robot.sleep(1000);
-
     robot.write("6");
     robot.clickOn("#companyIdField");
     robot.write("1");
@@ -174,19 +167,15 @@ class AltacontrollerTest {
     robot.write("hola Almeria fc ");
     robot.clickOn("#botonAceptar");
     robot.sleep(1000);
-
     WaitForAsyncUtils.waitForFxEvents();
     Optional<DialogPane> dialogPane = robot.lookup(".dialog-pane").tryQueryAs(DialogPane.class);
     assertTrue(dialogPane.isPresent());
     assertTrue(dialogPane.get().isVisible());
 
+
     robot.clickOn("Aceptar");
     robot.sleep(500);
   }
-
-
-
-
 
 
 }
