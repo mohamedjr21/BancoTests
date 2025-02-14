@@ -12,13 +12,9 @@ import org.testfx.api.FxAssert;
 import org.testfx.api.FxRobot;
 import org.testfx.framework.junit5.ApplicationExtension;
 import org.testfx.framework.junit5.Start;
-import org.testfx.matcher.base.WindowMatchers;
-import org.testfx.matcher.control.LabeledMatchers;
 import org.testfx.util.WaitForAsyncUtils;
-
 import java.io.IOException;
 import java.util.Optional;
-
 import static org.junit.jupiter.api.Assertions.*;
 
 @ExtendWith(ApplicationExtension.class)
@@ -136,7 +132,7 @@ class AltacontrollerTest {
     assertTrue(robot.lookup("#InicializarTabla").query().isVisible());
     robot.clickOn("#altaBoton");
     robot.sleep(1000);
-    robot.write("4");
+    robot.write("3");
     robot.clickOn("#companyIdField");
     robot.write("1");
     robot.clickOn("#conditionField");

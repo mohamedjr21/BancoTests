@@ -21,6 +21,7 @@ import org.testfx.util.WaitForAsyncUtils;
 import java.io.IOException;
 import java.sql.SQLException;
 import java.util.List;
+import java.util.Optional;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -56,6 +57,21 @@ public class HelloControllerTest {
     robot.clickOn("#BuscarButton");
     robot.sleep(500);
     assertTrue(robot.lookup("#InicializarTabla").query().isVisible());
+  }
+
+  @Test
+  void testEliminarRegistroRelacionadosOtrasTablas(FxRobot robot) {
+    robot.clickOn("#BuscarButton");
+    robot.sleep(500);
+
+    robot.clickOn("4");
+    robot.clickOn("#borrarButton");
+    robot.sleep(500);
+
+    Node mensajeAlerta = robot.lookup(".dialog-pane").query();
+    assertTrue(mensajeAlerta.isVisible());
+
+    robot.clickOn("Aceptar");
 
   }
 
@@ -110,6 +126,26 @@ public class HelloControllerTest {
 
 
   @Test
+  void testEditarRegistroConCamposVacios(FxRobot robot) {
+    robot.clickOn("#BuscarButton");
+    robot.sleep(500);
+
+    assertTrue(robot.lookup("#InicializarTabla").query().isVisible());
+
+    robot.clickOn("1");
+    robot.clickOn("#editarButton");
+    robot.sleep(1000);
+
+    //Dejo el campo vacío y hago  clic en Aceptar, y no me va a dejar
+    //aceptar la edición del registro
+    //porque tienen que estar todos los datos rellenados
+
+    robot.clickOn("#conditionField").eraseText(15);
+    robot.clickOn("#botonAceptar");
+
+  }
+
+  @Test
   void testEditarRegistro1Campo(FxRobot robot) {
     robot.clickOn("#BuscarButton");
     robot.sleep(500);
@@ -124,10 +160,6 @@ public class HelloControllerTest {
     robot.clickOn("#conditionField");
     robot.eraseText(15);
     robot.write("almeria fc");
-
-    // robot.clickOn("#jsonValueField");
-    //robot.eraseText(40);
-    //robot.write("cristiano ronaldo es el mejor del mundo");
 
     robot.clickOn("#botonAceptar");
   }
