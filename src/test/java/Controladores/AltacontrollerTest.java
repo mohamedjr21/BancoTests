@@ -168,7 +168,6 @@ class AltacontrollerTest {
     assertTrue(dialogPane.isPresent());
     assertTrue(dialogPane.get().isVisible());
 
-
     robot.clickOn("Aceptar");
     robot.sleep(500);
   }
